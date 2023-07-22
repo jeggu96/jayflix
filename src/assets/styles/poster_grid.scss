@@ -1,0 +1,34 @@
+.poster-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    .poster-card {
+        height:300px;
+        border-radius:35px;
+        display: flex;
+        align-items:flex-end;
+        overflow: hidden;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .poster-content{
+        width:100%;
+        padding: 15px 25px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.582);
+        color: white;
+        transform: translateY(100%);
+        transition: all 0.35s ease;
+    }
+    
+    .poster-card:hover .poster-content{
+        transform: translateY(0);
+    }
+}
