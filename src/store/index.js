@@ -28,7 +28,7 @@ export default createStore({
       {
         release_date: "2023-06-23",
         name: "Thandatti",
-        overview: "A constable, takes up a case that requires him to find a pair of gold earrings that belonged to a dead woman.",
+        overview: "Kumaran has had a troubled childhood after getting hit by lightning, comes back to his village to fight evil elements and provide hope through indigenous deities.",
         id: 1143279,
         poster_path: "/avhTPLXG3Gedvu5nc7nFt2eXTNy.jpg",
         backdrop_path: "/abSVptR8SeXNj02Oke4gU5FPkqk.jpg",
