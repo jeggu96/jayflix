@@ -6,19 +6,26 @@
 <template>
   <nav>
     <ul>
-      <li><a class="active" href="/"><i class="fa fa-home" /></a></li>
+      <li>
+        <a class="active" href="/">
+          <i class="fa fa-home" />
+        </a>
+      </li>
+      <li>
+        <a href="/movies/tamil">Tamil</a>
+      </li>
     </ul>
     <div class="media-switch">
-      <h3>MOVIES</h3>
+      <h3>MOV</h3>
       <label class="switch">
         <input type="checkbox" v-model="mediaTypeSwitch">
         <span class="slider">
             <span class="circle"></span>
         </span>
       </label>
-      <h3>SERIES</h3>
+      <h3>TV</h3>
     </div>
-    <div class="search" :click-outisde="clickedOutside">
+    <div class="search" :click-outisde="clickedOutside" v-if="!isMobile">
         <div class="search-bar">
           <input
             type="text" 
@@ -54,7 +61,14 @@ export default {
   computed: {
     ...mapState({
       mediaType: state => state.mediaType
-    })
+    }),
+    isMobile() {
+      if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        return true
+      } else {
+        return false
+      }
+    }
   },
   watch: {
     async searchQuery (query) {

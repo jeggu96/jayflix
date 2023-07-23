@@ -72,3 +72,68 @@
   background: transparent;
   opacity: 0.8;
 }
+
+// SPACING UTILITY CLASSER
+$space-stops: (
+  '0': 0,
+  '1': 0.25rem,
+  '2': 0.5rem,
+  '3': 0.75rem,
+  '4': 1rem,
+  '5': 1.25rem,
+  '6': 1.5rem,
+  '7': 1.75rem,
+  '8': 2rem,
+  '9': 2.25rem,
+  '10': 2.5rem,
+);
+
+@each $key, $val in $space-stops {
+  .p-#{$key} {
+    padding: #{$val} !important;
+  }
+  .pt-#{$key} {
+    padding-top: #{$val} !important;
+  }
+  .pr-#{$key} {
+    padding-right: #{$val} !important;
+  }
+  .pb-#{$key} {
+    padding-bottom: #{$val} !important;
+  }
+  .pl-#{$key} {
+    padding-left: #{$val} !important;
+  }
+  .px-#{$key} {
+    padding-right: #{$val} !important;
+    padding-left: #{$val} !important;
+  }
+  .py-#{$key} {
+    padding-top: #{$val} !important;
+    padding-bottom: #{$val} !important;
+  }
+
+  .m-#{$key} {
+    margin: #{$val} !important;
+  }
+  .mt-#{$key} {
+    margin-top: #{$val} !important;
+  }
+  .mr-#{$key} {
+    margin-right: #{$val} !important;
+  }
+  .mb-#{$key} {
+    margin-bottom: #{$val} !important;
+  }
+  .ml-#{$key} {
+    margin-left: #{$val} !important;
+  }
+  .mx-#{$key} {
+    margin-right: #{$val} !important;
+    margin-left: #{$val} !important;
+  }
+  .my-#{$key} {
+    margin-top: #{$val} !important;
+    margin-bottom: #{$val} !important;
+  }
+}

@@ -1,10 +1,5 @@
 <template>
   <div>
-    <iframe 
-      src="https://ww1.akstream.xyz/v/tt26691319-tamil"
-      style="width:90%; height: 500px;"
-      frameborder="0"
-      allowfullscreen />
     <HorizontalSlider
       v-if="latestMediaData && latestMediaData.length"
       :items="latestMediaData.slice(0, 5)">
@@ -15,15 +10,21 @@
               <p class="release">{{item.release_date}}</p>
               <h2 class="movie-name">{{item.name}}</h2>
               <p class="desc">{{item.overview}}</p>
-              <div class="movie-btns">
-                <button @click="watchMovie(item.id)"><span class="fa fa-play" aria-hidden="true"></span>&nbsp;Watch</button>
+              <div class="movie-btns mt-2">
+                <button @click="watchMovie(item.id)">
+                  <span class="fa fa-play" aria-hidden="true" />
+                </button>
               </div>
             </div>
           </div>
       </template>
     </HorizontalSlider>
 
-    <PosterGrid v-if="latestMediaData && latestMediaData.length" :items="latestMediaData" />
+    <PosterGrid
+      v-if="latestMediaData && latestMediaData.length"
+      :items="latestMediaData.slice(0, 10)"
+      class="mt-10"
+      @watch="watchMovie" />
 
     <ModalComponent v-if="videoPlayer.show" @close="videoPlayer.show = false">
       <template v-slot:body>

@@ -8,7 +8,7 @@
         <div class="poster-content">
           <h3>{{ item.name }}</h3>
           <div class="movie-btns">
-            <button @click="$emit('watch', item.video_url)"><span class="fa fa-play" aria-hidden="true"></span>&nbsp;Watch</button>
+            <button @click="$emit('watch', item.video_url || item.id)"><span class="fa fa-play" aria-hidden="true"></span></button>
           </div>
         </div>
       </div>

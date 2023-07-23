@@ -32,6 +32,10 @@
       padding: 0;
       border: none;
     }
+
+    @media only screen and (max-width: 600px) {
+      width: 100%;
+    }
   }
   
   /* The Close Button */

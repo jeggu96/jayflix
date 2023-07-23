@@ -5,14 +5,26 @@
     gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 
+    @media only screen and (max-width: 600px) {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        justify-items: center;
+        align-items: center;
+    }
+
     .poster-card {
         height:300px;
+        width:200px;
         border-radius:35px;
         display: flex;
         align-items:flex-end;
         overflow: hidden;
         background-size: cover;
         background-position: center;
+
+        @media only screen and (max-width: 600px) {
+            height: 200px;
+            width: 150px;
+        }
     }
 
     .poster-content{
@@ -26,6 +38,10 @@
         color: white;
         transform: translateY(100%);
         transition: all 0.35s ease;
+
+        @media only screen and (max-width: 600px) {
+            flex-direction: column;
+        }
     }
     
     .poster-card:hover .poster-content{
