@@ -12,7 +12,7 @@
         </a>
       </li>
       <li>
-        <a href="/movies/tamil">Tamil</a>
+        <router-link to="/movies/tamil">Tamil</router-link>
       </li>
     </ul>
     <div class="media-switch">
