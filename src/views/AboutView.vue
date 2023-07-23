@@ -4,7 +4,7 @@
       <template v-slot:body>
         <iframe 
           style="width:100%; height: 500px;"
-          :src="` https://www.2embed.cc/embed/${videoPlayer.videoId}`"
+          :src="`https://vidsrc.me/embed/movie?tmdb=${videoPlayer.videoId}`"
           frameborder="0"
           allowfullscreen />
       </template>

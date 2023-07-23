@@ -73,7 +73,7 @@ export default {
     watchMovie (id) {
       this.videoPlayer.show = true;
       this.videoPlayer.url = this.mediaType === 'movies' ?
-        `https://www.2embed.cc/embed/${id}` : ` https://www.2embed.cc/embedtv/${id}&s=1&e=1`;
+        `https://vidsrc.me/embed/movie?tmdb=${id}` : `https://vidsrc.me/embed/tv?tmdb=${id}&season=1&episode=1`;
     }
   }
 }
